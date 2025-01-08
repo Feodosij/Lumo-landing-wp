@@ -27,7 +27,7 @@
 			?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
+		<nav id="site-navigation" class="main__navigation">
 			<?php
                 wp_nav_menu(
                     array(
@@ -37,5 +37,8 @@
                 );
 			?>
 		</nav><!-- #site-navigation -->
+
+        <a href="#" class="book-button book-button--primary">book your seat</a>
+
 	</header><!-- #masthead -->
 

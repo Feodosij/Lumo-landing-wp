@@ -24,14 +24,15 @@ function lumo_setup() {
 
 	// Menus
 	register_nav_menus( array(
-		'main_menu'   => 'Main menu',
+		'header_menu'   => 'Header menu',
 		'footer_menu' => 'Footer menu',
 	));
 }
 add_action( 'after_setup_theme', 'lumo_setup' );
 
 function lumo_enqueue_scripts() {
-    wp_enqueue_style('theme-style', get_stylesheet_uri()); 
-    wp_enqueue_script('theme-scripts', get_template_directory_uri() . '/js/main.js', [], null, true);
+    wp_enqueue_style('lumo-theme-style', get_stylesheet_uri()); 
+    wp_enqueue_style( 'main_css', get_stylesheet_directory_uri() . '/dist/css/main.css',  array(), '1.0' );
+    wp_enqueue_script('lumo-scripts', get_template_directory_uri() . '/dist/js/main.js', [], null, true);
 }
 add_action('wp_enqueue_scripts', 'lumo_enqueue_scripts');

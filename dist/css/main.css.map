@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAAA,KACI,MAAA,QACA,QACI,MAAA","file":"main.css","sourcesContent":["body {\n    color: antiquewhite;\n    h1 {\n        color: brown;\n    }\n}"]}
