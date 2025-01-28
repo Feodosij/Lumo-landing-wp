@@ -19,7 +19,9 @@ const paths = {
     js: './src/js/**/*.js',
     jsDest: './dist/js',
     images: './src/img/**/*',
-    imagesDest: './dist/images'
+    imagesDest: './dist/images',
+    fonts: './src/fonts/**/*.{woff,woff2}',
+    fontsDest: './dist/fonts'
 };
 
 
@@ -58,6 +60,12 @@ export const images = () => {
     .pipe(gulp.dest(paths.imagesDest));
 };
 
+export const fonts = () => {
+  return gulp
+    .src(paths.fonts)
+    .pipe(gulp.dest(paths.fontsDest));
+};
+
 // Task to clean the "dist" folder
 export const clean = () => {
   return deleteAsync(['dist']);
@@ -68,7 +76,8 @@ export const watch = () => {
   gulp.watch(paths.scss, scss);
   gulp.watch(paths.js, js);
   gulp.watch(paths.images, images);
+  gulp.watch(paths.fonts, fonts);
 };
 
 // Default task to clean, build, and start the watch process
-export default gulp.series(clean, gulp.parallel(scss, js, images), watch);
+export default gulp.series(clean, gulp.parallel(scss, js, images, fonts), watch);
