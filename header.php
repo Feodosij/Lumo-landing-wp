@@ -18,27 +18,30 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'sandbox' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
+	<header class="site-header">
+		<div class="site-header__logo">
 			<?php
-                if (function_exists('the_custom_logo')) {
-                    the_custom_logo();
-                }
+				if (function_exists('the_custom_logo')) {
+					the_custom_logo();
+				}
 			?>
-		</div><!-- .site-branding -->
+		</div>
 
-		<nav id="site-navigation" class="main__navigation">
+		<nav class="site-menu site-menu--header">
 			<?php
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'main_menu',
-                        'menu_id'        => 'primary-menu',
-                    )
-                );
+				wp_nav_menu(
+					array(
+						'theme_location' => 'main_menu',
+						'menu_id'        => 'header-menu',
+						'container'      => 'false',
+						'menu_class'     => 'site-menu__list',
+					)
+				);
 			?>
-		</nav><!-- #site-navigation -->
+		</nav>
 
-        <a href="#" class="book-button book-button--primary">book your seat</a>
+		<a href="#" class="book-button book-button--primary">book your seat</a>
 
-	</header><!-- #masthead -->
+	</header>
+
 

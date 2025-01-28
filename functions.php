@@ -4,6 +4,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+add_filter('show_admin_bar', '__return_false');
 
 function lumo_setup() {
 
@@ -36,3 +37,12 @@ function lumo_enqueue_scripts() {
     wp_enqueue_script('lumo-scripts', get_template_directory_uri() . '/dist/js/main.js', [], null, true);
 }
 add_action('wp_enqueue_scripts', 'lumo_enqueue_scripts');
+
+// add custom class to menu li 
+function add_additional_class_on_li($classes, $item, $args) {
+    if (isset($args->menu_class) && $args->menu_class === 'site-menu__list') {
+        $classes[] = 'site-menu__item';
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'add_additional_class_on_li', 10, 3);
