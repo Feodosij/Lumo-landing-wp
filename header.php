@@ -27,7 +27,7 @@
 			?>
 		</div>
 
-		<nav class="site-menu site-menu--header">
+		<nav class="site-menu site-menu--header" id="menu">
 			<?php
 				wp_nav_menu(
 					array(
@@ -38,10 +38,17 @@
 					)
 				);
 			?>
+
+			<a href="#" class="book-button mobile-book book-button--primary">book your seat</a>
 		</nav>
 
 		<a href="#" class="book-button book-button--primary">book your seat</a>
 
+		<div class="burger" id="burger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
 	</header>
 
 
