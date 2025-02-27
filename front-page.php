@@ -145,7 +145,7 @@ get_header();
             </div>
         </div>
     </section>
-
+ 
     <section class="fleet">
         <div class="container">
             <?php if ( !empty( get_field( 'fleet_title' ) ) ) { ?>
@@ -294,8 +294,6 @@ get_header();
             </div>
         </div>
     </section>
-
-
 </main>
 
 <?php get_footer(); ?>
