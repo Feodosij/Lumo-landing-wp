@@ -1,0 +1,113 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.discount {
+    padding-top: 100px;
+    margin-bottom: 95px;
+
+    @include respond(laptop-s) {
+        padding-top: 30px;
+    }
+
+    @include respond(tablet) {
+        padding-top: 0;
+        margin-bottom: 68px;
+    }
+
+    @include respond(mobile) {
+        margin-bottom: 40px;
+    }
+
+    &__inner {
+        display: flex;
+        background-color: $font-dark;
+        min-height: 471px;
+        border-radius: 40px;
+        box-shadow: 0 4px 16px 0 rgba(51, 60, 79, 0.36);
+
+        @include respond(tablet) {
+            min-height: 405px;
+        }
+
+        @include respond(mobile) {
+            min-height: 345px;
+        }
+    }
+
+    &__image {
+        flex: 1;
+        position: relative;
+        
+        img {
+            max-width: 546px;
+            position: absolute;
+            bottom: 0;
+            left: 16px;
+
+            @include respond(laptop-s) {
+                max-width: 480px;
+            }
+        }
+
+        @include respond(tablet) {
+            display: none;
+        }
+    }
+
+    &__content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include respond(tablet) {
+            align-items: center;
+            padding: 16px;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.33em;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 31px;
+
+        @include respond(tablet) {
+            margin-bottom: 44px;
+            text-align: center;
+        }
+
+        @include respond(mobile) {
+            margin-bottom: 36px;
+        }
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 46px;
+        color: #fff;
+        margin-bottom: 48px;
+        max-width: 505px;
+
+        @include respond(tablet) {
+            margin-bottom: 31px;
+            text-align: center;
+        }
+
+        @include respond(mobile) {
+            font-size: 32px;
+            max-width: 470px;
+        }
+
+        span {
+            font-size: 64px;
+            color: $main-blue;
+
+            @include respond(mobile) {
+                font-size: 36px;
+            }
+        }
+    }
+}
