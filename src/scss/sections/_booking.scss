@@ -1,0 +1,183 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.booking {
+    margin-bottom: 106px;
+
+    @include respond(tablet) {
+        margin-bottom: 81px;
+    }
+
+    @include respond(mobile) {
+        margin-bottom: 65px;
+    }
+
+    &__inner {
+        box-shadow: 0 4px 16px 0 rgba(51, 60, 79, 0.36);
+        background: #fff;
+        border-radius: 40px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 40px;
+        background-color: $font-dark;
+        padding: 60px 100px 60px 72px;
+        min-height: 309px;
+
+        @include respond(tablet) {
+            min-height: 239px;
+            padding: 73px 44px 55px;
+        }
+
+        @include respond(mobile) {
+            min-height: 177px;
+            padding: 37px 25px 50px;
+            justify-content: center;
+        }
+    }
+
+    &__text {
+        flex-shrink: 0;
+
+        @include respond(mobile) {
+            flex-shrink: 1;
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.33em;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 31px;
+
+        @include respond(tablet) {
+            margin-bottom: 18px;
+        }
+
+        @include respond(mobile) {
+            font-size: 10px;
+        }
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 64px;
+        color: #fff;
+        text-transform: uppercase;
+
+        @include respond(mobile) {
+            font-size: 40px;
+        }
+    }
+
+    &__decor {
+        max-width: 276px;
+        margin-left: 30px;
+
+        @include respond(tablet) {
+            display: none;
+        }
+    }
+
+    &__form {
+        padding: 66px 112px 109px 112px;
+
+        @include respond(tablet) {
+            padding: 50px 44px 87px;
+        }
+
+        @include respond(mobile) {
+            padding: 30px 20px 79px;
+        }
+    }
+
+    &__form-group {
+        display: flex;
+        gap: 16px;
+
+        @include respond(tablet) {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .booking__form-row:last-of-type {
+            margin-bottom: 42px;
+    
+            @include respond(tablet) {
+                margin-bottom: 37px;
+            }
+    
+            @include respond(mobile) {
+                margin-bottom: 32px;
+            }
+        }
+    }
+
+    &__form-row {
+        border: 2px solid $font-dark;
+        border-radius: 40px;
+        width: 100%;
+        padding: 13px 33px 15px 33px;
+        margin-bottom: 42px;
+        display: flex;
+        flex-direction: column;
+
+        @include respond(tablet) {
+            margin-bottom: 37px;
+        }
+
+        @include respond(mobile) {
+            margin-bottom: 32px;
+            padding: 13px 27px 22px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 57px;
+
+            @include respond(tablet) {
+                margin-bottom: 45px;
+            }
+
+            @include respond(mobile) {
+                margin-bottom: 32px;
+            }
+        }
+    }
+
+    &__label {
+        font-weight: 700;
+        font-size: 10px;
+        letter-spacing: 0.33em;
+        text-transform: uppercase;
+        color: $font-light;
+        margin-bottom: 10px;
+
+        @include respond(mobile) {
+            font-size: 7px;
+            letter-spacing: 0.13em;
+            margin-bottom: 13px;
+        }
+    }
+
+    &__input {
+        font-weight: 400;
+        font-size: 20px;
+        color: $font-dark;
+        border: none;
+        padding: 0;
+
+        @include respond(mobile) {
+            font-size: 14px;
+        }
+
+        &::placeholder {
+            color: $font-dark;
+        }
+    }
+}

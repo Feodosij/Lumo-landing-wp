@@ -79,6 +79,7 @@ get_header();
                         the_row(); ?>
                     
                         <article class="feature">
+                            <a class="feature__link" href="google.com"></a>
                             <?php if ( !empty( get_sub_field( 'feature_icon' ) ) ) { ?>
                                 <div class="feature__icon"><img src="<?php echo esc_url( get_sub_field( 'feature_icon' ) ); ?>" alt="icon"></div>
                             <?php } ?>
@@ -103,7 +104,7 @@ get_header();
                                 ?>
 
                             <div class="feature__button">
-                                <a href="<?php echo esc_url( $feature_button_url ); ?>" class="arrow-button"><?php echo esc_html( $feature_button_title ); ?></a>
+                                <a href="<?php echo esc_url( $feature_button_url ); ?>" class="arrow-button"><span><?php echo esc_html( $feature_button_title ); ?></span></a>
                             </div>
 
                             <?php } ?>

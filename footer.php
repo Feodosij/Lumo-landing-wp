@@ -58,6 +58,8 @@
             </div>
         </div>
 	</footer>
+
+    <button id="scrollToTop" class="scroll_to_top" aria-label="scroll to top"></button>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

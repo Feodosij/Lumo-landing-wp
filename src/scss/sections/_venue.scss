@@ -1,0 +1,96 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.venue {
+    margin-bottom: 47px;
+
+    &__inner {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 403px;
+        border-radius: 40px;
+        padding: 50px 92px 50px 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        box-shadow: 0 4px 16px 0 rgba(51, 60, 79, 0.36);
+
+        @include respond(tablet) {
+            padding: 60px 35px 64px 50px;
+        }
+
+        @include respond(mobile) {
+            padding: 46px 24px;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 102px;
+        right: 92px;
+
+        @media (max-width: 1300px) {
+            right: 60px;
+        }
+
+        @include respond(laptop-s) {
+            position: initial;
+            margin-bottom: 50px;
+        }
+
+        @include respond(mobile) {
+            margin-bottom: 27px;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.33em;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 31px;
+
+        @include respond(tablet) {
+            margin-bottom: 0;
+        }
+
+        @include respond(mobile) {
+            margin-bottom: 22px;
+            font-size: 10px;
+        }
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 64px;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 25px;
+
+        @include respond(tablet) {
+            font-size: 56px;
+            margin-bottom: 30px;
+        }
+
+        @include respond(mobile) {
+            margin-bottom: 22px;
+            font-size: 32px;
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        color: #fff;
+        max-width: 1175px;
+
+        @include respond(mobile) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}
